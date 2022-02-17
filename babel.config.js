@@ -1,3 +1,4 @@
 module.exports = {
-  sourceMaps: 'inline',
+  presets: [["@babel/preset-env", "@babel/preset-typescript"]],
+  sourceMaps: "inline",
 };

@@ -1,26 +1,26 @@
-import {Context} from 'koa';
+import { Context } from "koa";
 
-import {OAuthStartOptions} from '../types';
+import { OAuthStartOptions } from "../types";
 
-import Fpp from 'fpp-node-api';
+import Fpp from "fpp-node-api";
 
-import css from './client/polaris-css';
-import itpHelper from './client/itp-helper';
-import requestStorageAccess from './client/request-storage-access';
-import storageAccessHelper from './client/storage-access-helper';
-import Error from './errors';
+import css from "./client/polaris-css";
+import itpHelper from "./client/itp-helper";
+import requestStorageAccess from "./client/request-storage-access";
+import storageAccessHelper from "./client/storage-access-helper";
+import Error from "./errors";
 
-const HEADING = 'This app needs access to your browser data';
+const HEADING = "This app needs access to your browser data";
 const BODY =
-  'Your browser is blocking this app from accessing your data. To continue using this app, click Continue, then click Allow if the browser prompts you.';
-const ACTION = 'Continue';
+  "Your browser is blocking this app from accessing your data. To continue using this app, click Continue, then click Allow if the browser prompts you.";
+const ACTION = "Continue";
 
 export default function createRequestStorageAccess({
   prefix,
 }: OAuthStartOptions) {
   return function requestStorage(ctx: Context) {
-    const {query} = ctx;
-    const {shop} = query;
+    const { query } = ctx;
+    const { shop } = query as any;
 
     if (shop == null) {
       ctx.throw(400, Error.ShopParamMissing);
