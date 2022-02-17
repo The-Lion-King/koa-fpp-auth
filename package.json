@@ -10,8 +10,6 @@
     "lint": "eslint",
     "prepare": "husky install",
     "prepublishOnly": "yarn run build",
-    "test": "jest",
-    "preversion": "yarn test",
     "postversion": "git push origin master --follow-tags && echo \"Log in to shipit to deploy version $npm_package_version\""
   },
   "publishConfig": {
@@ -20,12 +18,12 @@
   "author": "the-lion-king",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shopify/koa-shopify-auth.git"
+    "url": "git+https://github.com/The-Lion-King/koa-fpp-auth.git"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/koa-shopify-auth/issues"
+    "url": "https://github.com/The-Lion-King/koa-fpp-auth/issues"
   },
-  "homepage": "https://github.com/Shopify/koa-shopify-auth/blob/master/README.md",
+  "homepage": "https://github.com/The-Lion-King/koa-fpp-auth",
   "dependencies": {
     "fpp-node-api": "^1.0.0",
     "koa-compose": ">=3.0.0 <4.0.0",
