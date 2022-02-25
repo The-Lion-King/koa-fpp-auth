@@ -1,6 +1,6 @@
 {
   "name": "koa-fpp-auth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Middleware to authenticate a Koa application with Fpp",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -25,7 +25,7 @@
   "homepage": "https://github.com/The-Lion-King/koa-fpp-auth",
   "dependencies": {
     "@babel/preset-typescript": "^7.16.7",
-    "fpp-node-api": "^1.0.1",
+    "fpp-node-api": "^1.0.3",
     "koa-compose": ">=3.0.0 <4.0.0",
     "nonce": "^1.0.4",
     "tslib": "^2.0.3"
